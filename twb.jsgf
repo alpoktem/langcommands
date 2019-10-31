@@ -1,0 +1,7 @@
+#JSGF V1.0;
+
+grammar twb;
+
+public <basicCmd> = <command>;
+
+<command> = (arab | arabic | babur | barbacci | barno | buangelangela | bura | bura pabir | chadian arab | chadian arabic | chibbak | chibok | chifayaha | cibak | elvawandala | fula | fulah | fulani | fulbe | fulfulde | fullata | gwozo | hadikala | haoussa | hausa | kanuri | kibaku | kikuk | kolejo | kyibaku | mandara | marghi | myar marghi | pabir | pullo | shuwa | shuwa arab | shuwa arabic | waha | wandala);
