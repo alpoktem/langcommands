@@ -10,7 +10,7 @@ LANG_DICT = {'hausa':'Hausa', 'haoussa':'Hausa',
 			 'fulfulde': 'Fulfulde', 'fulani': 'Fulfulde', 'fulah': 'Fulfulde', 'fula': 'Fulfulde', 'fulbe': 'Fulfulde', 'fullata': 'Fulfulde', 'pullo': 'Fulfulde',
 			 'shuwa':'Shuwa', 'shuwa arab':'Shuwa', 'shuwa arabic':'Shuwa', 'shuwa arab':'Shuwa', 'arab':'Shuwa', 'arabic':'Shuwa', 'chadian arabic': 'Shuwa', 'chadian arab': 'Shuwa',
 			 'bura': 'Bura-Pabir', 'bura pabir':'Bura-Pabir', 'babur':'Bura-Pabir', 'pabir':'Bura-Pabir', 
-			 'waha': 'Waha',
+			 'waha': 'Waha', 'lamang': 'Waha', 'chifayaha': 'Waha', 'hadikala': 'Waha', 'gwozo': 'Waha',
 			 'chibok':'Kibaku', 'kibaku': 'Kibaku', 'kikuk':'Kibaku', 'kyibaku':'Kibaku', 'chibbak':'Kibaku', 'chibok':'Kibaku', 'cibak':'Kibaku',
 			 'mandara':'Mandara', 'wandala':'Mandara', 'elvawandala':'Mandara'}
 
