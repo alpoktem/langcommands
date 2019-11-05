@@ -58,12 +58,6 @@ r.recognize_sphinx(audio, language='en-US-limited', grammar=‘mygrammar.jsgf’
 
 ## Javascript prototype
 
-Install: 
-- [node.js](https://nodejs.org/en/)
-- [emscripten](https://emscripten.org/docs/getting_started/downloads.html#)
-- [pocketsphinx.js](https://github.com/syl22-00/pocketsphinx.js)
-- Cmake
-
 ### Installing and building pocketsphinx.js
 
 ```
@@ -102,19 +96,23 @@ $ cd <path-to-pocketsphinx.js>
 $ python server.py
 ```
 
-`langcommands` app will be running in `http://localhost:8000/webapp/live_lang.html`
+Demo app will be running at `http://localhost:8000/webapp/live_lang.html`
 
 NOTE: The server needs to be run with python 2.
 
-### Packaging your own language model with pocketsphinx.js
+### Packaging your own languages with pocketsphinx.js
 
-In order to run pocketsphinx.js on another language, you need to package the model directory into javascript files.  
+Requirements: 
+- [emscripten](https://emscripten.org/docs/getting_started/downloads.html#)
+- Cmake
+
+In order to run pocketsphinx.js on another language, you need to package the model directory into javascript files.
 
 ```
 $ cd <path-to-pocketsphinx.js>
 $ mkdir build
 $ cd build
-$ cmake -DEMSCRIPTEN=1 -DCMAKE_TOOLCHAIN_FILE=<your-emscripten-path>/cmake/Modules/Platform/Emscripten.cmake -DHMM_BASE=<your-python-path>/site-packages/speech_recognition/pocketsphinx-data -DHMM_FOLDERS="en-US;en-US-langcommands" ..
+$ cmake -DEMSCRIPTEN=1 -DCMAKE_TOOLCHAIN_FILE=<your-emscripten-path>/cmake/Modules/Platform/Emscripten.cmake -DHMM_BASE=<your-acoustic-model-path> -DHMM_FOLDERS="en-US;en-US-langcommands" ..
 $ make
 ```
 
