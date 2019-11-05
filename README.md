@@ -102,6 +102,8 @@ $ cd <path-to-pocketsphinx.js>
 $ python server.py
 ```
 
+`langcommands` app will be running in `http://localhost:8000/webapp/live_lang.html`
+
 NOTE: The server needs to be run with python 2.
 
 ### Packaging your own language model with pocketsphinx.js
