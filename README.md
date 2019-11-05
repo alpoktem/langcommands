@@ -92,13 +92,28 @@ $ git submodule init
 $ git submodule update
 ```
 
-Build with your new language:
+### Langcommands demo
+
+Pocketsphinx.js has built-in demo apps inside the `webapp` directory with already packaged acoustic models. In order to run the `langcommands demo`, place the `live_lang.html` into this folder and then run the python server that comes within pocketsphinx.js:
 
 ```
+$ cp live_lang.html <path-to-pocketsphinx.js>/webapp
+$ cd <path-to-pocketsphinx.js>
+$ python server.py
+```
+
+NOTE: The server needs to be run with python 2.
+
+### Packaging your own language model with pocketsphinx.js
+
+In order to run pocketsphinx.js on another language, you need to package the model directory into javascript files.  
+
+```
+$ cd <path-to-pocketsphinx.js>
 $ mkdir build
 $ cd build
 $ cmake -DEMSCRIPTEN=1 -DCMAKE_TOOLCHAIN_FILE=<your-emscripten-path>/cmake/Modules/Platform/Emscripten.cmake -DHMM_BASE=<your-python-path>/site-packages/speech_recognition/pocketsphinx-data -DHMM_FOLDERS="en-US;en-US-langcommands" ..
 $ make
 ```
 
-...to be continued...
+More information can be found in [pocketsphinx.js README](https://github.com/syl22-00/pocketsphinx.js)
